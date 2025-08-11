@@ -23,6 +23,20 @@ body{
   -moz-osx-font-smoothing:grayscale;
   padding: 16px;
 }
+
+.app-container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  padding: 1rem;
+  overflow: hidden;
+}
 input,
 textarea {
   display: block;
