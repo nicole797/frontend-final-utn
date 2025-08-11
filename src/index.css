@@ -6,7 +6,6 @@
     height: 100%; 
   }
 
-
 :root{
   --primary: #0d6efd;
   --muted: #6c757d;
@@ -14,6 +13,15 @@
   --card-bg: #ffffff;
   --container-width: 1200px;
   --radius: 10px;
+}
+
+body{
+  font-family: 'Roboto', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: var(--bg);
+  color: #222;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  padding: 16px;
 }
 input,
 textarea {
