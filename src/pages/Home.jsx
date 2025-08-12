@@ -90,7 +90,7 @@ const Home = () => {
     }
   }
 
-  // filtrado en tiempo real por título (coincidencia parcial)
+  // filtrado en tiempo real por título
   const filteredProducts = products.filter(p =>
     p.title.toLowerCase().includes(search.toLowerCase())
   );
@@ -121,11 +121,21 @@ const Home = () => {
         </ul>
       </section>
 
-      <section>
+      <section className="app-container mt-4">
         <h2>Nuestros productos</h2>
         <p>Elegí entre nuestras categorías más populares.</p>
 
-
+        {/* input de busqueda */}
+        <div className="mb-3">
+          <input
+            className="form-control"
+            type="text"
+            placeholder="Buscar productos..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            aria-label="Buscar productos"
+          />
+        </div>
         {
           showPopup && <section  className="popup-edit">
             <h2>Editando producto.</h2>
