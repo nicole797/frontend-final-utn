@@ -181,16 +181,18 @@ const Home = () => {
                 onChange={(e) => setImageEdit(e.target.value)}
               />
               </div>
-              <button>Actualizar</button>
+              {formError && <div className="form-error">{formError}</div>}
+
+              <button className="btn btn-primary mt-2" type= "submit">Actualizar</button>
             </form>
           </section>
         }
 
-        <div>
+        <div className="product-grid">
           {
-            products.map((product) => <div key={product.id}>
+            products.map((product) => <div className="card" key={product.id}>
               <h2 key={product.id}>{product.title}</h2>
-              <img width="80px" src={product.image} alt={`Imagen de ${product.title}`} />
+              <img src={product.image} alt={`Imagen de ${product.title}`} style={{width: '100%', height: 200, objectFit: 'contain'}}/>
               <p>${product.price}</p>
               <p>{product.description}</p>
               <p><strong>{product.category}</strong></p>
