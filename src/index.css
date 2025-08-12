@@ -29,7 +29,7 @@ body{
   margin: 0 auto;
   padding: 0 1rem;
 }
-
+/* cards genéricos */
 .card {
   background: var(--card-bg);
   border-radius: var(--radius);
@@ -37,6 +37,14 @@ body{
   padding: 1rem;
   overflow: hidden;
 }
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+
 input,
 textarea {
   display: block;
