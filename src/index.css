@@ -60,6 +60,22 @@ body{
   .card img { height: 180px; object-fit: contain; }
 }
 
+h1, h2 { 
+  margin-bottom: 0.5rem; 
+}
+.product-title { 
+  font-size: 1rem; font-weight: 600; 
+}
+.product-price { 
+  color: var(--primary); font-weight: 700; 
+}
+
+.form-error { 
+  color:#c42b2b;
+  margin-top: 0.5rem; 
+  font-size: 0.9rem; 
+}
+
 input,
 textarea {
   display: block;
