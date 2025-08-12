@@ -191,15 +191,15 @@ const Home = () => {
         <div className="product-grid">
           {
             products.map((product) => <div className="card" key={product.id}>
-              <h2 key={product.id}>{product.title}</h2>
+              <h2 className="product-title mt-2" key={product.id}>{product.title}</h2>
               <img src={product.image} alt={`Imagen de ${product.title}`} style={{width: '100%', height: 200, objectFit: 'contain'}}/>
               <p  className="product-price">${product.price}</p>
               <p style={{fontSize: 0.9}}>{product.description.slice(0, 120)}{product.description.length>120?"...":""}</p>
               <p className="text-muted" style={{fontSize: 0.9}}><strong>{product.category}</strong></p>
               {
-                user && <div>
-                  <button onClick={() => handleOpenEdit(product)}>Actualizar</button>
-                  <button onClick={() => handleDelete(product.id)}>Borrar</button>
+                user && <div className="mt-2 d-flex gap-2">
+                  <button className="btn btn-sm btn-outline-primary" onClick={() => handleOpenEdit(product)}>Actualizar</button>
+                  <button className="btn btn-sm btn-outline-danger" onClick={() => handleDelete(product.id)}>Borrar</button>
                 </div>
               }
             </div>)
