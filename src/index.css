@@ -37,13 +37,28 @@ body{
   padding: 1rem;
   overflow: hidden;
 }
-
+/* grid de productos (default: desktop 4 columnas) */
 .product-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
 }
 
+/* tablet: 2 columnas */
+@media (max-width: 880px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* mobile: 1 columna */
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card img { height: 180px; object-fit: contain; }
+}
 
 input,
 textarea {
