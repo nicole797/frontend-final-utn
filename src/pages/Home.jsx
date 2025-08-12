@@ -4,6 +4,7 @@ import { useAuth } from "../context/UserContext"
 
 const Home = () => {
   const [products, setProducts] = useState([])
+  const [search, setSearch] = useState("")
   const [showPopup, setShowPopup] = useState(null)
   const [productToEdit, setProductToEdit] = useState(null)
   const [titleEdit, setTitleEdit] = useState("")
@@ -137,39 +138,49 @@ const Home = () => {
           />
         </div>
         {
-          showPopup && <section  className="popup-edit">
+          showPopup && <section className="card mb-3">
             <h2>Editando producto.</h2>
-            <button onClick={() => setShowPopup(null)}>Cerrar</button>
+            <button className="btn btn-sm btn-outline-secondary mb-2"onClick={() => setShowPopup(null)}>Cerrar</button>
             <form onSubmit={handleUpdate}>
-              <input
+              <div className="mb-2">
+                <input className="form-control"
                 type="text"
                 placeholder="Ingrese el titulo"
                 value={titleEdit}
                 onChange={(e) => setTitleEdit(e.target.value)}
               />
-              <input
+              </div>
+              <div className="mb-2">
+                <input className="form-control"
                 type="number"
                 placeholder="Ingrese el precio"
                 value={priceEdit}
                 onChange={(e) => setPriceEdit(e.target.value)}
               />
-              <textarea
+              </div>
+              <div className="mb-2">
+                <textarea className="form-control"
                 placeholder="Ingrese la descripción"
                 value={descriptionEdit}
                 onChange={(e) => setDescriptionEdit(e.target.value)}
               ></textarea>
-              <input
+              </div>
+              <div className="mb-2">
+                <input className="form-control"
                 type="text"
                 placeholder="Ingrese la categoria"
                 value={categoryEdit}
                 onChange={(e) => setCategoryEdit(e.target.value)}
               />
-              <input
+              </div>
+              <div className="mb-2">
+                <input className="form-control"
                 type="text"
                 placeholder="Ingrese la URL de la imagen"
                 value={imageEdit}
                 onChange={(e) => setImageEdit(e.target.value)}
               />
+              </div>
               <button>Actualizar</button>
             </form>
           </section>
