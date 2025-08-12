@@ -78,20 +78,17 @@ const Home = () => {
       })
 
       if (response.ok) {
-        const data = await response.json()
-        setProducts(prevProduct =>
-          prevProduct.map((product) =>
-            product.id === productToEdit.id
-              ? data
-              : product
-          ))
-        // fetchingProducts()
+        const data = await response.json();
+        setProducts(prev => prev.map(p => p.id === productToEdit.id ? data : p));
+        setShowPopup(false);
+      } else {
+        setFormError("No se pudo actualizar (respuesta no OK)");
       }
-      setShowPopup(false)
     } catch (error) {
-      console.log(error)
+      console.log(error);
+      setFormError("Error de red al actualizar");
     }
-  }
+  };
 
   return (
     <Layout>
