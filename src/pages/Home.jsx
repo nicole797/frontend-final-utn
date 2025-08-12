@@ -88,16 +88,22 @@ const Home = () => {
       console.log(error);
       setFormError("Error de red al actualizar");
     }
-  };
+  }
+
+  // filtrado en tiempo real por título (coincidencia parcial)
+  const filteredProducts = products.filter(p =>
+    p.title.toLowerCase().includes(search.toLowerCase())
+  );
+
 
   return (
     <Layout>
-      <section>
+      <section className="app-container">
         <h1>Bienvenido a Nuestra Tienda</h1>
         <p>Descubrí una selección exclusiva de productos para vos. Calidad, confianza y atención personalizada.</p>
       </section>
 
-      <section>
+      <section  className="app-container mt-4">
         <h2>¿Por qué elegirnos?</h2>
         <ul>
           <li>
@@ -121,7 +127,7 @@ const Home = () => {
 
 
         {
-          showPopup && <section className="popup-edit">
+          showPopup && <section  className="popup-edit">
             <h2>Editando producto.</h2>
             <button onClick={() => setShowPopup(null)}>Cerrar</button>
             <form onSubmit={handleUpdate}>
