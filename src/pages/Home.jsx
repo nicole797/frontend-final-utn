@@ -53,6 +53,12 @@ const Home = () => {
   const handleUpdate = async (e) => {
     e.preventDefault()
 
+    if (!titleEdit.trim()) { setFormError("El título es obligatorio"); return; }
+    if (!priceEdit || Number(priceEdit) <= 0) { setFormError("El precio debe ser mayor a 0"); return; }
+    if (!descriptionEdit.trim()) { setFormError("La descripción es obligatoria"); return; }
+
+    setFormError("")
+    
     const updatedProduct = {
       id: productToEdit.id,
       title: titleEdit,
