@@ -99,7 +99,7 @@ const Home = () => {
 
   return (
     <Layout>
-      <section className="container text-center home-hero-modern">
+      <section className="home-hero-modern">
       <h1 className="display-4 fw-bold mb-3">Bienvenido a Nuestra Tienda</h1>
       <p className="lead mx-auto">
         Descubrí una selección exclusiva de productos para vos. Calidad, confianza y atención personalizada.
