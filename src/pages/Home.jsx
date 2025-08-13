@@ -190,7 +190,7 @@ const Home = () => {
 
         <div className="product-grid">
           {
-            products.map((product) => <div className="card" key={product.id}>
+            filteredProducts.map((product) => <div className="card" key={product.id}>
               <h2 className="product-title mt-2" key={product.id}>{product.title}</h2>
               <img src={product.image} alt={`Imagen de ${product.title}`} style={{width: '100%', height: 200, objectFit: 'contain'}}/>
               <p  className="product-price">${product.price}</p>
