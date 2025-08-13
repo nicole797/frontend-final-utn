@@ -11,11 +11,11 @@ const Register = () => {
   const [success, setSuccess] = useState("")
   const [validated, setValidated] = useState(false)
   
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     setError("")
     setSuccess("")
-    setValidated(false);
+    setValidated(false)
 
     if (!username || !email || !password) {
       setError("Debes completar todos los campos")
@@ -65,7 +65,7 @@ const Register = () => {
 
       <section  className="w-50 mx-auto">
         <h2 className="mb-3">Hola, bienvenido</h2>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className={validated ? "was-validated" : ""}noValidate>
           <div className="mb-3">
             <label  className="form-label">Username:</label>
             <input
