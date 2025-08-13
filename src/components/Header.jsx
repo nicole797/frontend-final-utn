@@ -10,10 +10,10 @@ const Header = () => {
 
   return (
     <header>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
-        <div className="container">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <div className="container-fluid">
           {/* Logo */}
-          <Link className="navbar-brand fw-bold" to="/">
+          <Link className="navbar-brand" to="/">
             <img
               src="/src/assets/logo.png"
               alt="logo"
@@ -26,8 +26,8 @@ const Header = () => {
             className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
@@ -35,15 +35,22 @@ const Header = () => {
           </button>
 
           {/* Menú */}
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav ms-auto">
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+              {/* Links visibles para todos */}
+              <li className="nav-item">
+                <Link className="nav-link" to="/">
+                  Inicio
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/about">
+                  Sobre Nosotros
+                </Link>
+              </li>
+
               {user ? (
                 <>
-                  <li className="nav-item">
-                    <Link className="nav-link" to="/">
-                      Inicio
-                    </Link>
-                  </li>
                   <li className="nav-item">
                     <Link className="nav-link" to="/dashboard">
                       Dashboard
@@ -52,8 +59,12 @@ const Header = () => {
                   <li className="nav-item">
                     <button
                       onClick={handleLogout}
-                      className="btn btn-link nav-link text-danger"
-                      style={{ textDecoration: "none" }}
+                      className="btn btn-danger nav-link"
+                      style={{
+                        cursor: "pointer",
+                        border: "none",
+                        background: "none",
+                      }}
                     >
                       Cerrar sesión
                     </button>
