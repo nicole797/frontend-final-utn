@@ -13,7 +13,7 @@ const Header = () => {
       <img src="/src/assets/logo.png" alt="imagen de logo" />
       <nav>
         <ul>
-          {/* Cambiar elementos a por componentes Link de react-router-dom */}
+          
           {
             user && <>
               <li><Link to="/">Inicio</Link></li>
