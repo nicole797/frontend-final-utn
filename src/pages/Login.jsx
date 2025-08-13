@@ -1,4 +1,3 @@
-
 import { useState } from "react"
 import { Layout } from "../components/Layout"
 import { useAuth } from "../context/UserContext"
@@ -7,19 +6,33 @@ import { useNavigate } from "react-router-dom"
 const Login = () => {
   const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
+  const [error, setError] = useState("")
   const { login } = useAuth()
 
   const nagivate = useNavigate()
 
   const handleLogin = async (e) => {
     e.preventDefault()
-    console.log({ username, password })
+    setError("")
+
+     // Validaciones básicas:
+    if (!username.trim()) {
+      setError("El nombre de usuario es obligatorio");
+      return
+    }
+    if (!password) {
+      setError("La contraseña es obligatoria");
+      return
+    }
+
     const isLogin = await login(username, password)
 
     if (isLogin) {
       setUsername("")
       setPassword("")
       nagivate("/")
+    } else {
+      setError("Usuario o contraseña incorrectos")
     }
   }
 
