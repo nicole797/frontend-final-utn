@@ -69,28 +69,28 @@ const Register = () => {
           <div className="mb-3">
             <label  className="form-label">Username:</label>
             <input
-              type="text"
+              type="text" className="form-control" value={username}
               onChange={(e) => setUsername(e.target.value)}
-              value={username}
+              required
             />
           </div>
           <div className="mb-3">
             <label className="form-label">Correo electrónico:</label>
             <input
-              type="email"
+              type="email" className="form-control" value={email}
               onChange={(e) => setEmail(e.target.value)}
-              value={email}
+              required
             />
           </div>
           <div className="mb-3">
             <label className="form-label">Contraseña:</label>
             <input
-              type="password"
+              type="password" className="form-control" value={password}
               onChange={(e) => setPassword(e.target.value)}
-              value={password}
+              required
             />
           </div>
-          <button className="btn btn-primary w-100" type="submit">Ingresar</button>
+          <button className="btn btn-primary w-100" type="submit">Registrarse</button>
         </form>
 
         {
