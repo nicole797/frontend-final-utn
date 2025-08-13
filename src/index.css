@@ -18,8 +18,8 @@
 
 body{
   font-family: 'Roboto', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  color: var (--color-fondo);
-  color: var(--color-oscuro);
+  color: var(--color-fondo);
+  background-color: var(--color-fondo);
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
   padding: 16px;
@@ -33,7 +33,7 @@ button {
 }
 
 button:hover {
-  background-color: var(--color-secundario);
+  background-color: var(--accent-color);
 }
 .app-container {
   max-width: var(--container-width);
@@ -42,7 +42,7 @@ button:hover {
 }
 /* cards genéricos */
 .card {
-  background: var(--card-bg);
+  background: var(--card-terciario);
   border-radius: var(--radius);
   box-shadow: 0 6px 18px rgba(0,0,0,0.06);
   padding: 1rem;
@@ -72,23 +72,31 @@ button:hover {
 }
 
 h1, h2 { 
-  margin-bottom: 0.5rem; 
+  margin-bottom: 0.5rem;
+  color: var(--color-oscuro);
 }
 .product-title { 
   font-size: 1rem; font-weight: 600; 
+  font-weight: 600; 
+  color: var(--color-oscuro);
 }
 .product-price { 
-  color: var(--primary); font-weight: 700; 
+  color: var(--color-principal); 
+  font-weight: 700;
 }
 
 .form-error { 
-  color:#c42b2b;
+  color: #c42b2b;
   margin-top: 0.5rem; 
-  font-size: 0.9rem; 
+  font-size: 0.9rem;
 }
 
 input,
 textarea {
   display: block;
   padding: 5px;
+  border: 1px solid var(--color-oscuro);
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 0.5rem;
 }
