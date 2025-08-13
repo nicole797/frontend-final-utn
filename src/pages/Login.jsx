@@ -42,7 +42,6 @@ const Login = () => {
 
       <section>
         <h2>Hola, bienvenido de nuevo</h2>
-        <p>johnd, m38rmF$</p>
         <form onSubmit={handleLogin}>
           <div  className="mb-3">
             <label>Nombre de usuario:</label>
