@@ -99,13 +99,14 @@ const Home = () => {
 
   return (
     <Layout>
-      <section className="container text-center py-5 bg-gradient" style={{ background: "linear-gradient(90deg, #ff758c, #ff7eb3, #7a5fff)", color: "black", borderRadius: "15px" }} >
-        <h1 className="display-4 fw-bold mb-3">Bienvenido a Nuestra Tienda</h1>
-        <p className="lead mx-auto" style={{ maxWidth: "700px" }}>Descubrí una selección exclusiva de productos para vos.
-        Calidad, confianza y atención personalizada.</p>
-      </section>
+      <section className="container text-center home-hero-modern">
+      <h1 className="display-4 fw-bold mb-3">Bienvenido a Nuestra Tienda</h1>
+      <p className="lead mx-auto">
+        Descubrí una selección exclusiva de productos para vos. Calidad, confianza y atención personalizada.
+      </p>
+    </section>
 
-      <section className="container mt-5">
+      <section className="container section-why">
         <h2 className="text-center mb-4">¿Por qué elegirnos?</h2>
         <ul>
           <li>
@@ -191,7 +192,8 @@ const Home = () => {
 
         <div className="product-grid">
           {
-            filteredProducts.map((product) => <div className="card" key={product.id}>
+            filteredProducts.map((product) =>
+              <div className="card" key={product.id}>
               <h2 className="product-title mt-2" key={product.id}>{product.title}</h2>
               <img src={product.image} alt={`Imagen de ${product.title}`} style={{width: '100%', height: 200, objectFit: 'contain'}}/>
               <p  className="product-price">${product.price}</p>
