@@ -24,11 +24,24 @@ html, body, #root {
 
 /* Body */
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   font-family: 'Roboto', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   color: var(--color-oscuro);
   background-color: var(--color-fondo);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main{
+  flex:1;
 }
 
 /* Botones */
@@ -202,7 +215,8 @@ input, textarea {
   background-color: var(--color-principal);
   color: var(--color-fondo);
   padding: 1rem 0;
-  margin-top: 2rem;
+  text-align: center;
+
 }
 
 .footer-container {
