@@ -65,9 +65,9 @@ const Register = () => {
 
       <section  className="w-50 mx-auto">
         <h2 className="mb-3">Hola, bienvenido</h2>
-        <form onSubmit={handleSubmit} className={validated ? "was-validated" : ""}noValidate>
+        <form onSubmit={handleSubmit} className={validated ? "was-validated" : ""} noValidate>
           <div className="mb-3">
-            <label  className="form-label">Username:</label>
+            <label  className="form-label">Nombre de usuario:</label>
             <input
               type="text" className="form-control" value={username}
               onChange={(e) => setUsername(e.target.value)}
