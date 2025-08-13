@@ -44,7 +44,7 @@ const Login = () => {
         <h2>Hola, bienvenido de nuevo</h2>
         <p>johnd, m38rmF$</p>
         <form onSubmit={handleLogin}>
-          <div>
+          <div  className="mb-3">
             <label>Nombre de usuario:</label>
             <input
               type="text"
@@ -52,13 +52,13 @@ const Login = () => {
               value={username} />
           </div>
           <div>
-            <label>Contraseña:</label>
+            <label className="mb-3">Contraseña:</label>
             <input
               type="password"
               onChange={(e) => setPassword(e.target.value)}
               value={password} />
           </div>
-          <button>Ingresar</button>
+          <button className="btn btn-primary">Ingresar</button>
         </form>
       </section>
     </Layout>
