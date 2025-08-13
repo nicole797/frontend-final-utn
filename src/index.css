@@ -1,30 +1,117 @@
-* { box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  html, body, #root { 
-    height: 100%; 
-  }
-
-:root{
-  --color-oscuro: #1D1D1B;
-  --color-principal: #600F0D;
-  --color-secundario: #B26A78;
-  --color-fondo: #FFFDFD;
-  --color-terciario: #C2DADA;
-  --container-width: 1200px;
+:root {
+  --color-principal: #600F0D;  
+  --color-secundario: #b26a7823;  
+  --color-terciario: #13ffd821;   
+  --color-oscuro: #1D1D1B;     
+  --color-fondo: #FFFDFD;      
   --radius: 10px;
 }
 
-body{
+/* Reset base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
   font-family: 'Roboto', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  color: var(--color-fondo);
+  color: var(--color-oscuro);
   background-color: var(--color-fondo);
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   padding: 16px;
 }
-button {
+
+/* Sección de bienvenida */
+.home-hero {
+  background: linear-gradient(90deg, var(--color-principal), var(--color-secundario));
+  color: var(--color-fondo);
+  border-radius: 15px;
+  padding: 3rem 1rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.home-hero h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.home-hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Sección ¿Por qué elegirnos? */
+.section-why {
+  background-color: var(--color-terciario);
+  color: var(--color-oscuro);
+  padding: 2rem 1rem;
+  border-radius: var(--radius);
+  margin: 2rem 0;
+}
+
+.section-why h2, .section-why h3, .section-why p {
+  color: var(--color-oscuro);
+}
+
+.section-why ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.section-why li {
+  margin-bottom: 1rem;
+}
+
+/* Cards de productos */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 880px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+  .card img { 
+    height: 180px; 
+    object-fit: contain; 
+  }
+}
+
+.card {
+  background-color: var(--color-secundario);
+  border-radius: var(--radius);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  padding: 1rem;
+  overflow: hidden;
+}
+
+.product-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-oscuro);
+}
+
+.product-price {
+  color: var(--color-principal);
+  font-weight: 700;
+}
+
+/* Botones */
+button, .btn {
   background-color: var(--color-principal);
   color: var(--color-fondo);
   border: none;
@@ -32,71 +119,42 @@ button {
   border-radius: 0.25rem;
 }
 
-button:hover {
-  background-color: var(--accent-color);
-}
-.app-container {
-  max-width: var(--container-width);
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-/* cards genéricos */
-.card {
-  background: var(--card-terciario);
-  border-radius: var(--radius);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
-  padding: 1rem;
-  overflow: hidden;
-}
-/* grid de productos (default: desktop 4 columnas) */
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
+button:hover, .btn:hover {
+  background-color: var(--color-secundario);
 }
 
-/* tablet: 2 columnas */
-@media (max-width: 880px) {
-  .product-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.btn-outline-primary {
+  border: 1px solid var(--color-principal);
+  color: var(--color-principal);
 }
 
-/* mobile: 1 columna */
-@media (max-width: 480px) {
-  .product-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .card img { height: 180px; object-fit: contain; }
+.btn-outline-primary:hover {
+  background-color: var(--color-principal);
+  color: var(--color-fondo);
 }
 
-h1, h2 { 
-  margin-bottom: 0.5rem;
-  color: var(--color-oscuro);
-}
-.product-title { 
-  font-size: 1rem; font-weight: 600; 
-  font-weight: 600; 
-  color: var(--color-oscuro);
-}
-.product-price { 
-  color: var(--color-principal); 
-  font-weight: 700;
-}
-
-.form-error { 
+.btn-outline-danger {
+  border: 1px solid #c42b2b;
   color: #c42b2b;
-  margin-top: 0.5rem; 
-  font-size: 0.9rem;
 }
 
-input,
-textarea {
+.btn-outline-danger:hover {
+  background-color: #c42b2b;
+  color: var(--color-fondo);
+}
+
+/* Formulario */
+input, textarea {
   display: block;
   padding: 5px;
   border: 1px solid var(--color-oscuro);
   border-radius: 5px;
   width: 100%;
   margin-bottom: 0.5rem;
+}
+
+.form-error {
+  color: #c42b2b;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
 }
