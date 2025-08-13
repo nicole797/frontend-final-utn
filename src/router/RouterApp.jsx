@@ -1,11 +1,11 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import Home from "../pages/Home"
-import Dashboard  from "../pages/Dashboard"
-import Login  from "../pages/Login"
-import Register  from "../pages/Register"
-import  NotFound  from "../pages/NotFound"
-import  PrivateRoute from "../components/PrivateRoute"
-import About  from "../pages/About"
+import { Home } from "../pages/Home"
+import { Dashboard }  from "../pages/Dashboard"
+import { Login }  from "../pages/Login"
+import { Register } from "../pages/Register"
+import { NotFound }  from "../pages/NotFound"
+import { PrivateRoute} from "../components/PrivateRoute"
+import { About } from "../pages/About"
 
 const RouterApp = () => {
   return (
