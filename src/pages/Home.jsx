@@ -124,21 +124,22 @@ const Home = () => {
         </ul>
       </section>
 
-      <section className="app-container mt-4 text-center">
-  <h2 className="mb-2">Nuestros productos</h2>
-  <p className="mb-4">Elegí entre nuestras categorías más populares.</p>
+      <section className="app-container mt-4">
+  <div className="products-header">
+    <h2>Nuestros productos</h2>
+    <p>Elegí entre nuestras categorías más populares.</p>
 
-  {/* input de búsqueda */}
-  <div className="mb-4 d-flex justify-content-center">
-    <input
-      className="form-control search-input"
-      type="text"
-      placeholder="Buscar productos..."
-      value={search}
-      onChange={(e) => setSearch(e.target.value)}
-      aria-label="Buscar productos"
-      style={{ maxWidth: "400px" }} 
-    />
+    {/* input de busqueda */}
+    <div className="mb-3">
+      <input
+        className="form-control search-input"
+        type="text"
+        placeholder="Buscar productos..."
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+        aria-label="Buscar productos"
+      />
+    </div>
   </div>
         {
           showPopup && <section className="card mb-3">
