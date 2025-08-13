@@ -7,16 +7,35 @@ const Register = () => {
   const [password, setPassword] = useState("")
   const [error, setError] = useState("")
   const [success, setSuccess] = useState("")
-
+  const [validated, setValidated] = useState(false)
+  
   const handleSubmit = (e) => {
     e.preventDefault()
     setError("")
     setSuccess("")
+    setValidated(false);
 
     if (!username || !email || !password) {
       setError("Debes completar todos los campos")
       return
     }
+    if (username.length < 3) {
+      setError("El nombre de usuario debe tener al menos 3 caracteres");
+      return;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      setError("El correo electrónico no es válido");
+      return;
+    }
+
+    if (password.length < 6) {
+      setError("La contraseña debe tener al menos 6 caracteres");
+      return;
+    }
+
+    setValidated(true);
 
     const newUser = {
       username,
