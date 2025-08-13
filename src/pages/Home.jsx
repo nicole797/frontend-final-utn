@@ -99,17 +99,18 @@ const Home = () => {
 
   return (
     <Layout>
-      <section className="app-container">
-        <h1>Bienvenido a Nuestra Tienda</h1>
-        <p>Descubrí una selección exclusiva de productos para vos. Calidad, confianza y atención personalizada.</p>
+      <section className="container text-center py-5 bg-gradient" style={{ background: "linear-gradient(90deg, #ff758c, #ff7eb3, #7a5fff)", color: "black", borderRadius: "15px" }} >
+        <h1 className="display-4 fw-bold mb-3">Bienvenido a Nuestra Tienda</h1>
+        <p className="lead mx-auto" style={{ maxWidth: "700px" }}>Descubrí una selección exclusiva de productos para vos.
+        Calidad, confianza y atención personalizada.</p>
       </section>
 
-      <section  className="app-container mt-4">
-        <h2>¿Por qué elegirnos?</h2>
+      <section className="container mt-5">
+        <h2 className="text-center mb-4">¿Por qué elegirnos?</h2>
         <ul>
           <li>
-            <h3>Envíos a todo el país</h3>
-            <p>Recibí tu compra en la puerta de tu casa estés donde estés.</p>
+            <h3 className="card-title text-primary mb-2">Envíos a todo el país</h3>
+            <p className="card-text">Recibí tu compra en la puerta de tu casa estés donde estés.</p>
           </li>
           <li>
             <h3>Pagos seguros</h3>
