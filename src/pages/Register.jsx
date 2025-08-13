@@ -53,44 +53,47 @@ const Register = () => {
 
   return (
     <Layout>
-      <h1>Registrate</h1>
+      <h1 className="mb-4">Registrate</h1>
 
-      <section>
-        <h2>Hola, bienvenido</h2>
+      <section  className="w-50 mx-auto">
+        <h2 className="mb-3">Hola, bienvenido</h2>
         <form onSubmit={handleSubmit}>
-          <div>
-            <label>Username:</label>
+          <div className="mb-3">
+            <label  className="form-label">Username:</label>
             <input
               type="text"
               onChange={(e) => setUsername(e.target.value)}
               value={username}
             />
           </div>
-          <div>
-            <label>Correo electrónico:</label>
+          <div className="mb-3">
+            <label className="form-label">Correo electrónico:</label>
             <input
               type="email"
               onChange={(e) => setEmail(e.target.value)}
               value={email}
             />
           </div>
-          <div>
-            <label>Contraseña:</label>
+          <div className="mb-3">
+            <label className="form-label">Contraseña:</label>
             <input
               type="password"
               onChange={(e) => setPassword(e.target.value)}
               value={password}
             />
           </div>
-          <button>Ingresar</button>
+          <button className="btn btn-primary w-100" type="submit">Ingresar</button>
         </form>
 
         {
-          error && <p style={{ color: "red" }}>{error}</p>
-        }
+          error && (<div className="alert alert-danger mt-3" role="alert">{error}
+          </div>
+        )}
         {
-          success && <p style={{ color: "green" }}>{success}</p>
-        }
+          success && (
+          <div className="alert alert-success mt-3" role="alert">{success}
+          </div>
+        )}
       </section>
     </Layout>
   )
