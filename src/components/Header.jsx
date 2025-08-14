@@ -56,25 +56,13 @@ const Header = () => {
                       Dashboard
                     </Link>
                   </li>
-                  <li className="nav-item">
-                    <button
-                      onClick={handleLogout}
-                      className="btn btn-danger nav-link"
-                      style={{
-                        cursor: "pointer",
-                        border: "none",
-                        background: "none",
-                      }}
-                    >
-                      Cerrar sesión
-                    </button>
-                  </li>
+                  <li className="nav-item"><button onClick={handleLogout}className="btn-logout">Cerrar sesión</button></li>
                 </>
               ) : (
                 <>
                   <li className="nav-item">
                     <Link className="nav-link" to="/login">
-                      Login
+                      Iniciar sesión
                     </Link>
                   </li>
                   <li className="nav-item">

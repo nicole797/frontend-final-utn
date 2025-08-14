@@ -204,7 +204,7 @@ const Home = () => {
 
               {
                 user && <div className="mt-2 d-flex gap-2">
-                  <button className="btn btn-update" onClick={() => handleOpenEdit(product)}>Actualizar</button>
+                  <button className="btn btn-update" onClick={() => handleOpenEdit(product)}>Editar</button>
                   <button className="btn btn-delete" onClick={() => handleDelete(product.id)}>Borrar</button>
                 </div>
               }
