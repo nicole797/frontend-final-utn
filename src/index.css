@@ -146,9 +146,11 @@ input, textarea {
 
 /* Section Why */
 .section-why {
-  background-color: var(--color-terciario);
+  /* background-color: var(--color-terciario); */
   color: var(--color-oscuro);
   padding: 2rem 1rem;
+  border-radius: var(--radius);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.05);
 }
 
 .section-why h2, .section-why h3, .section-why p {
@@ -235,5 +237,23 @@ input, textarea {
 .footer-link:hover {
   color: #ff3e3eb7;
   text-decoration: underline;
+}
+
+.product-description {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  max-height: 4.2rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.product-category {
+  color: var(--color-principal); 
+  font-size: 0.75rem;
+  font-weight: bold;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+
 }
 

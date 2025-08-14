@@ -110,8 +110,8 @@ const Home = () => {
         <h2 className="text-center mb-4">¿Por qué elegirnos?</h2>
         <ul>
           <li>
-            <h3 className="card-title text-primary mb-2">Envíos a todo el país</h3>
-            <p className="card-text">Recibí tu compra en la puerta de tu casa estés donde estés.</p>
+            <h3 >Envíos a todo el país</h3>
+            <p >Recibí tu compra en la puerta de tu casa estés donde estés.</p>
           </li>
           <li>
             <h3>Pagos seguros</h3>
@@ -199,8 +199,9 @@ const Home = () => {
               <h2 className="product-title mt-2" key={product.id}>{product.title}</h2>
               <img src={product.image} alt={`Imagen de ${product.title}`} style={{width: '100%', height: 200, objectFit: 'contain'}}/>
               <p  className="product-price">${product.price}</p>
-              <p style={{fontSize: 0.9}}>{product.description.slice(0, 120)}{product.description.length>120?"...":""}</p>
-              <p className="text-muted" style={{fontSize: 0.9}}><strong>{product.category}</strong></p>
+              <p className="product-description">{product.description}</p>
+              <p className="product-category">{product.category}</p>
+
               {
                 user && <div className="mt-2 d-flex gap-2">
                   <button className="btn btn-sm btn-outline-primary" onClick={() => handleOpenEdit(product)}>Actualizar</button>
