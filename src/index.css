@@ -79,33 +79,44 @@ button:hover, .btn:hover {
   color: var(--color-fondo);
 }
 
-/* Inputs y Formularios */
+/* Inputs y Formularios (unificados con el estilo del buscador) */
 input, textarea {
   display: block;
-  padding: 5px;
-  border: 1px solid var(--color-oscuro);
-  border-radius: 4px;
+  padding: 0.75rem 1rem;
+  border: 1px solid #B26A78; /* borde inicial suave */
+  border-radius: 50px;
   width: 100%;
   margin-bottom: 0.5rem;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s;
 }
 
+input:focus, textarea:focus {
+  border-color: var(--color-principal);
+  box-shadow: 0 0 6px var(--color-principal);
+}
+
+/* Header de productos */
 .products-header {
   text-align: center;
   margin-bottom: 2rem;
 }
+
 .search-input {
   border-radius: 50px;
   padding: 0.75rem 1rem;
-  border: 1px solid var(--color-oscuro);
+  border: 1px solid #B26A78;
   max-width: 400px;
   margin: 0 auto; 
 }
-.search-input, input:focus{
-  outline: none;
-  box-shadow: 0 0 5px var(--color-principal);
-  border-color: var(--color-principal);
 
+.search-input:focus{
+  outline: none;
+  box-shadow: 0 0 6px var(--color-principal);
+  border-color: var(--color-principal);
 }
+
 .form-error {
   color: #c42b2b;
   margin-top: 0.5rem;
@@ -146,7 +157,6 @@ input, textarea {
 
 /* Section Why */
 .section-why {
-  /* background-color: var(--color-terciario); */
   color: var(--color-oscuro);
   padding: 2rem 1rem;
   border-radius: var(--radius);
@@ -212,13 +222,29 @@ input, textarea {
   color: var(--color-principal);
   font-weight: 700;
 }
-/* Footer*/
+
+.product-description {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  max-height: 4.2rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.product-category {
+  color: var(--color-principal); 
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Footer */
 .footer {
   background-color: var(--color-principal);
   color: var(--color-fondo);
   padding: 1rem 0;
   text-align: center;
-
 }
 
 .footer-container {
@@ -239,21 +265,21 @@ input, textarea {
   text-decoration: underline;
 }
 
-.product-description {
-  font-size: 0.95rem;
-  line-height: 1.4;
-  max-height: 4.2rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
+/* Contenedor para formularios de login y register */
+.form-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  padding: 2rem;
 }
 
-.product-category {
-  color: var(--color-principal); 
-  font-size: 0.75rem;
-  font-weight: bold;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-
+.form-container {
+  background-color: var(--color-secundario);
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  max-width: 400px;
+  width: 100%;
 }
 

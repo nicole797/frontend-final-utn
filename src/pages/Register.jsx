@@ -61,47 +61,51 @@ const Register = () => {
   }
   return (
     <Layout>
-      <h1 className="mb-4">Registrate</h1>
-
-      <section  className="w-50 mx-auto">
-        <h2 className="mb-3">Hola, bienvenido</h2>
-        <form onSubmit={handleSubmit} className={validated ? "was-validated" : ""} noValidate>
-          <div className="mb-3">
-            <label  className="form-label">Nombre de usuario:</label>
-            <input
-              type="text" className="form-control" value={username}
-              onChange={(e) => setUsername(e.target.value)}
-              required
-            />
-          </div>
-          <div className="mb-3">
-            <label className="form-label">Correo electrónico:</label>
-            <input
-              type="email" className="form-control" value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-          </div>
-          <div className="mb-3">
-            <label className="form-label">Contraseña:</label>
-            <input
-              type="password" className="form-control" value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-            />
-          </div>
-          <button className="btn btn-primary w-100" type="submit">Registrarse</button>
-        </form>
-
-        {
-          error && (<div className="alert alert-danger mt-3" role="alert">{error}
-          </div>
-        )}
-        {
-          success && (
-          <div className="alert alert-success mt-3" role="alert">{success}
-          </div>
-        )}
+      <section className="form-section">
+        <div className="form-container">
+          <h1 className="mb-4 text-center">Registrate</h1>
+          <h2 className="mb-3 text-center">Hola, bienvenido</h2>
+          <form onSubmit={handleSubmit} className={validated ? "was-validated" : ""} noValidate>
+            <div className="mb-3">
+              <label className="form-label">Nombre de usuario:</label>
+              <input
+                type="text"
+                className="form-control search-input"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+                placeholder="Nombre de usuario"
+                required
+              />
+            </div>
+            <div className="mb-3">
+              <label className="form-label">Correo electrónico:</label>
+              <input
+                type="email"
+                className="form-control search-input"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Correo electrónico"
+                required
+              />
+            </div>
+            <div className="mb-3">
+              <label className="form-label">Contraseña:</label>
+              <input
+                type="password"
+                className="form-control search-input"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                placeholder="Contraseña"
+                required
+              />
+            </div>
+            {error && <div className="alert alert-danger">{error}</div>}
+            {success && <div className="alert alert-success">{success}</div>}
+            <button type="submit" className="btn btn-primary w-100 mt-2">
+              Registrarse
+            </button>
+          </form>
+        </div>
       </section>
     </Layout>
   )
