@@ -42,9 +42,7 @@ Luego abre http://localhost:5173 en tu navegador y listo, podrás explorar la ti
 
 📌 Notas
 
-Todos los inputs y botones siguen la misma paleta de colores definida en el proyecto.
-
-La sección de "Sobre Nosotros" está diseñada con tarjetas para mejorar la legibilidad.
-
-El sistema de login y registro es funcional usando FakeStore API como simulación.
+-Todos los inputs y botones siguen la misma paleta de colores definida en el proyecto.
+-La sección de "Sobre Nosotros" está diseñada con tarjetas para mejorar la legibilidad.
+-El sistema de login y registro es funcional usando FakeStore API como simulación.
 ```
