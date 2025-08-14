@@ -106,23 +106,37 @@ const Home = () => {
       </p>
     </section>
 
-      <section className="container section-why">
-        <h2 className="text-center mb-4">¿Por qué elegirnos?</h2>
-        <ul>
-          <li>
-            <h3 >Envíos a todo el país</h3>
-            <p >Recibí tu compra en la puerta de tu casa estés donde estés.</p>
-          </li>
-          <li>
-            <h3>Pagos seguros</h3>
-            <p>Trabajamos con plataformas que garantizan tu seguridad.</p>
-          </li>
-          <li>
-            <h3>Atención personalizada</h3>
-            <p>Estamos disponibles para ayudarte en todo momento.</p>
-          </li>
-        </ul>
-      </section>
+      <section className="container mt-5">
+  <h2 className="text-center mb-5">¿Por qué elegirnos?</h2>
+  <div className="row g-4">
+    {/* Tarjeta 1 */}
+    <div className="col-md-4">
+      <div className="card text-center p-4 shadow-sm border-0 rounded-4 card-custom" style={{ backgroundColor: "#8f1e1eff" }}>
+        <i className="bi bi-truck display-4 text-white mb-3"></i>
+        <h5 className="card-title mb-2 text-white">Envíos a todo el país</h5>
+        <p className="card-text text-white">Recibí tu compra en la puerta de tu casa estés donde estés.</p>
+      </div>
+    </div>
+
+    {/* Tarjeta 2 */}
+    <div className="col-md-4">
+      <div className="card text-center p-4 shadow-sm border-0 rounded-4 card-custom" style={{ backgroundColor: "#cb896bff" }}>
+        <i className="bi bi-credit-card display-4 text-white mb-3"></i>
+        <h5 className="card-title mb-2 text-white">Pagos seguros</h5>
+        <p className="card-text text-white">Trabajamos con plataformas que garantizan tu seguridad.</p>
+      </div>
+    </div>
+
+    {/* Tarjeta 3 */}
+    <div className="col-md-4">
+      <div className="card text-center p-4 shadow-sm border-0 rounded-4 card-custom" style={{ backgroundColor: "#dbababff" }}>
+        <i className="bi bi-person-check display-4 text-white mb-3"></i>
+        <h5 className="card-title mb-2 text-white">Atención personalizada</h5>
+        <p className="card-text text-white">Estamos disponibles para ayudarte en todo momento.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
       <section className="app-container mt-4">
   <div className="products-header">
