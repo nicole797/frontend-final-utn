@@ -79,6 +79,31 @@ button:hover, .btn:hover {
   color: var(--color-fondo);
 }
 
+.btn-update {
+  background-color: #1a4572;
+  color: #fff;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.btn-update:hover {
+  background-color: #598dc4a4;
+}
+
+.btn-delete {
+  background-color: #dc3545;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.btn-delete:hover {
+  background-color: #a71d2a;
+}
+
 /* Inputs y Formularios (unificados con el estilo del buscador) */
 input, textarea {
   display: block;
