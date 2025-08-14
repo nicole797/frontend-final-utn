@@ -15,7 +15,7 @@ const Header = () => {
           {/* Logo */}
           <Link className="navbar-brand" to="/">
             <img
-              src="/src/assets/logo.png"
+              src="public\logo.png"
               alt="logo"
               style={{ height: "40px" }}
             />
